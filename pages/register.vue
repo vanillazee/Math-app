@@ -1,14 +1,14 @@
 <template>
     <div class="flex min-h-screen">
       <!-- Kiri: Background Image -->
-      <div class="w-1/2 h-full bg-cover bg-center" style="background-image: url('/math-background.jpg');"></div>
+      <img src="~/assets/bg2.png" alt="Math Background" class="w-3/5 h-full bg-cover" />
   
       <!-- Kanan: Register Form -->
       <div class="w-1/2 flex flex-col items-center justify-center p-10 bg-white">
         <!-- Logo dan About -->
-        <div class="absolute top-8 right-10 flex items-center space-x-4">
-            <NuxtLink to="/about" class="text-gray-600 hover:text-blue-600">About</NuxtLink>
-            <img src="assets/logo.png" alt="App Logo" class="w-10 h-10" />
+        <div class="absolute top-8 right-20 flex items-center space-x-4">
+            <NuxtLink to="/dashboard" class="text-gray-600 hover:text-blue-600">Home</NuxtLink>
+            <img src="assets/logo.png" alt="App Logo" class="w-8 h-8" />
         </div>
   
         <!-- Form Register -->
@@ -41,7 +41,7 @@
             </p>
             <p class="mt-2 text-gray-600">or</p>
             <button class="flex items-center justify-center w-full mt-4 py-2 border border-gray-300 rounded-md">
-              <img src="/google-logo.png" alt="Google Logo" class="w-5 h-5 mr-2" />
+              <img src="assets/google-logo.png" alt="Google Logo" class="w-5 h-5 mr-2" />
               <span>Sign up with Google</span>
             </button>
           </div>
