@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-
+    
     <!-- Header -->
     <header class="bg-white shadow">
       <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -26,10 +26,10 @@
       </nav>
     </header>
 
-    <!-- Konten Utama dengan Sidebar dan Konten Sub-Bab -->
-    <div class="flex mt-6">
+    <!-- Main Content with Sidebar and Sub-Chapter Content -->
+    <div class="container mx-auto flex mt-6">
       
-      <!-- Sidebar Kiri: Daftar Bab -->
+      <!-- Left Sidebar: Chapter List -->
       <aside class="w-1/2 border-r border-gray-300 p-4">
         <h2 class="text-xl font-semibold mb-4">Chapters</h2>
         <ul>
@@ -38,14 +38,15 @@
             :key="index" 
             @click="selectChapter(index)"
             :class="{'bg-blue-100': selectedChapter === index}"
-            class="p-2 cursor-pointer border-b border-gray-200 hover:bg-blue-50"
+            class="p-4 mb-4 cursor-pointer border border-gray-300 rounded-lg hover:bg-blue-50 shadow-sm"
           >
-            {{ chapter.title }}
+            <h3 class="text-lg font-bold">{{ chapter.title }}</h3>
+            <p class="text-gray-600 text-sm mt-1">{{ chapter.description }}</p>
           </li>
         </ul>
       </aside>
 
-      <!-- Konten Kanan: Daftar Sub-Bab -->
+      <!-- Right Content: Sub-Chapter List -->
       <main class="w-2/3 p-4">
         <h2 class="text-xl font-semibold mb-4">Sub-Chapters</h2>
         <div v-if="selectedChapter !== null">
@@ -71,10 +72,10 @@
 import { ref } from 'vue';
 
 const chapters = ref([
-  { title: 'Algebra', subChapters: ['Linear Equations', 'Quadratic Equations', 'Polynomials'] },
-  { title: 'Geometry', subChapters: ['Triangles', 'Circles', 'Polygons'] },
-  { title: 'Calculus', subChapters: ['Limits', 'Derivatives', 'Integrals'] },
-  { title: 'Statistics', subChapters: ['Mean', 'Median', 'Probability'] }
+  { title: 'Algebra', description: 'Basic concepts in Algebra', subChapters: ['Linear Equations', 'Quadratic Equations', 'Polynomials'] },
+  { title: 'Geometry', description: 'Understanding shapes and angles', subChapters: ['Triangles', 'Circles', 'Polygons'] },
+  { title: 'Calculus', description: 'Introduction to Calculus', subChapters: ['Limits', 'Derivatives', 'Integrals'] },
+  { title: 'Statistics', description: 'Fundamentals of data analysis', subChapters: ['Mean', 'Median', 'Probability'] }
 ]);
 
 const selectedChapter = ref(null);
@@ -85,7 +86,7 @@ function selectChapter(index) {
 </script>
 
 <style scoped>
-/* Menambahkan gaya sederhana untuk membedakan area konten */
+/* Additional styling for sidebar and content area */
 aside {
   background-color: #f9fafb;
 }
