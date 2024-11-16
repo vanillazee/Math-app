@@ -5,13 +5,13 @@ import { getAuth } from "firebase/auth";
 
 // Your Firebase Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAKUf6hZgpeWixSrQVT9j9mHC_7zyrX81U",
-    authDomain: "mathapp-rpl.firebaseapp.com",
-    projectId: "mathapp-rpl",
-    storageBucket: "mathapp-rpl.firebasestorage.app",
-    messagingSenderId: "505386538767",
-    appId: "1:505386538767:web:a3f29bd04e7854d0f8107a",
-    measurementId: "G-BWZ1Y9F2QZ"
+    apiKey: "api",
+    authDomain: "domain",
+    projectId: "project",
+    storageBucket: "storage",
+    messagingSenderId: "id",
+    appId: "appId",
+    measurementId: "measurement"
   };
 
 // Initialize Firebase
