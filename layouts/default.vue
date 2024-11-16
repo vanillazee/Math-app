@@ -1,9 +1,14 @@
+<script setup>
+import { useAuth } from "@/composables/useAuth";
+
+// Call the composable to monitor user state
+useAuth();
+</script>
+
 <template>
-    <NavBar />
-    <NuxtPage />
-  </template>
-  
-  <script setup>
-  import NavBar from '@/components/NavBar.vue'
-  </script>
-  
+  <div>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
+</template>
